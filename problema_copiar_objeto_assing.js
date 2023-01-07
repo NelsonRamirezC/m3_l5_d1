@@ -7,9 +7,11 @@ let persona = {
     }
 }
 
-let pedro = Object.assign({}, persona);
+//let pedro = Object.assign({}, persona); //PARA ESTE CASO NO SIRVE
+let pedro = JSON.parse(JSON.stringify(persona));
 
 pedro.mascota.nombre = "nuevo nombre de perro";
 
 console.log("persona", persona);
 console.log("pedro", pedro)
+
